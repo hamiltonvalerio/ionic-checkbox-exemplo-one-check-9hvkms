@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Welcome to Ionic!</h2>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label>Utilizado</ion-label>
+        <ion-checkbox [disabled]="isDisabledutilizado" color="primary" [(ngModel)]="utilizado" (click)="valida()">
+        </ion-checkbox>
+      </ion-item>
+    </ion-col>
+
+    <ion-col>
+      <ion-item>
+        <ion-label>Descartado</ion-label>
+        <ion-checkbox [disabled]="isDisableddescartado" color="secondary" [(ngModel)]="descartado" (click)="valida()">
+        </ion-checkbox>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+
+    <ion-label>{{descartado}}</ion-label>
+    <ion-label>{{chkReference}}</ion-label>
+
+  </ion-row>
+
+</ion-content>
